@@ -1,6 +1,10 @@
-# cypress-skip-and-only-ui [![renovate-app badge][renovate-badge]][renovate-app] [![CircleCI](https://circleci.com/gh/bahmutov/cypress-skip-and-only-ui.svg?style=svg)](https://circleci.com/gh/bahmutov/cypress-skip-and-only-ui) [![ci](https://github.com/bahmutov/cypress-skip-and-only-ui/actions/workflows/ci.yml/badge.svg?branch=master&event=push)](https://github.com/bahmutov/cypress-skip-and-only-ui/actions/workflows/ci.yml) ![cypress version](https://img.shields.io/badge/cypress-9.7.0-brightgreen)
+# cypress-skip-and-only-ui [![renovate-app badge][renovate-badge]][renovate-app] [![ci](https://github.com/SimonFischer04/cypress-skip-and-only-ui/actions/workflows/ci.yml/badge.svg?branch=dev&event=push)](https://github.com/SimonFischer04/cypress-skip-and-only-ui/actions/workflows/ci.yml) ![cypress version](https://img.shields.io/badge/cypress-9.7.0-brightgreen)
 
 > Client-side buttons to run a single test or skip it for Cypress test runner
+
+This is a fork of [bahmutov/cypress-skip-and-only-ui](https://github.com/bahmutov/cypress-skip-and-only-ui)
+updated for newer Cypress versions, published to npm as
+[`@simonfischer04/cypress-skip-and-only-ui`][npm-url].
 
 [![NPM][npm-icon] ][npm-url]
 
@@ -9,20 +13,20 @@
 ## Install and use
 
 ```shell
-npm i -D cypress-skip-and-only-ui
+npm i -D @simonfischer04/cypress-skip-and-only-ui
 ```
 
 Import from your `cypress/support/e2e.js`
 
 ```js
-import 'cypress-skip-and-only-ui/support';
+import '@simonfischer04/cypress-skip-and-only-ui/support';
 ```
 
 Import and register task from `cypress.config.ts` / `cypress.config.js`
 
 ```js
 import { defineConfig } from 'cypress'
-import skipAndOnlyUiTasks from 'cypress-skip-and-only-ui/task';
+import skipAndOnlyUiTasks from '@simonfischer04/cypress-skip-and-only-ui/task';
 
 export default defineConfig({
   e2e: {
@@ -37,7 +41,7 @@ Note: if you have other tasks already, just merge the objects before registering
 
 ```js
 import { defineConfig } from 'cypress'
-import skipAndOnlyUiTasks from 'cypress-skip-and-only-ui/task';
+import skipAndOnlyUiTasks from '@simonfischer04/cypress-skip-and-only-ui/task';
 
 const otherTasks = [{ ... }]
 module.exports = (on, config) => {
@@ -59,7 +63,7 @@ Author: Gleb Bahmutov &lt;gleb.bahmutov@gmail.com&gt; &copy; 2019
 License: MIT - do anything with the code, but don't blame me if it does not work.
 
 Support: if you find any problems with this module, email / tweet /
-[open issue](https://github.com/bahmutov/cypress-skip-and-only-ui/issues) on Github
+[open issue](https://github.com/SimonFischer04/cypress-skip-and-only-ui/issues) on Github
 
 ## MIT License
 
@@ -86,7 +90,7 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
-[npm-icon]: https://nodei.co/npm/cypress-skip-and-only-ui.svg?downloads=true
-[npm-url]: https://npmjs.org/package/cypress-skip-and-only-ui
+[npm-icon]: https://nodei.co/npm/@simonfischer04/cypress-skip-and-only-ui.svg?downloads=true
+[npm-url]: https://www.npmjs.com/package/@simonfischer04/cypress-skip-and-only-ui
 [renovate-badge]: https://img.shields.io/badge/renovate-app-blue.svg
 [renovate-app]: https://renovateapp.com/
